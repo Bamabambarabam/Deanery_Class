@@ -1,0 +1,17 @@
+cmake_minimum_required (VERSION 3.10.2)
+project(Deanery)
+project(${PROJECT_NAME})
+set(CMAKE_CXX_STANDARD 17)
+include_directories(${PROJECT_SOURCE_DIR}/include)
+file(GLOB SRC_FILES ${PROJECT_SOURCE_DIR}/src/*.cpp)
+add_library(deanery_lib ${SRC_FILES})
+set(COMMON_INCLUDES ${PROJECT_SOURCE_DIR}/include)
+
+add_executable(Deanery ${PROJECT_SOURCE_DIR}/src/main.cpp
+        include/Deanery.h
+        include/Group.h
+        include/Student.h
+        src/Student.cpp
+        src/Group.cpp
+        src/Deanery.cpp)
+target_link_libraries(Deanery deanery_lib)
