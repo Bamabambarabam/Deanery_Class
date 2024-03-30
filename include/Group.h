@@ -20,8 +20,8 @@ class Group {
   Student* head;
 
  public:
+  Group() = default;
   Group(const std::string& title, const std::string& spec);
-
   void addStudent(const Student* student);
   void chooseHead();
   bool findStudent(const std::string& fio);

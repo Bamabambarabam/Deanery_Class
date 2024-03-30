@@ -20,6 +20,7 @@ class Student {
   std::vector<int64_t > marks;
 
  public:
+  Student() = default;
   Student(const int64_t& id, const std::string& fio);
   void addToGroup(Group* group_);
   void addMark(int64_t mark);

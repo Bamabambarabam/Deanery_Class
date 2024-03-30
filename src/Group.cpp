@@ -52,9 +52,9 @@ double Group::getAverageMarkGroup() {
 }
 
 void Group::deleteStudent(Student* student) {
-  for (auto i = students.begin(); i != students.end(); ++i) {
-    if (*i == student) {
-      students.erase(i);
+  for (int64_t i = 0; i < students.size(); ++i) {
+    if (students[i] == student) {
+      students.erase(students.begin() + i);
       break;
     }
   }
