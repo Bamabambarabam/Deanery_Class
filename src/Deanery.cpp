@@ -78,6 +78,29 @@ void Deanery::getStatistics() {
   }
 }
 
+void Deanery::getStatistics(const std::string& groupName) {
+  for (Group *group : groups) {
+    if (group->getTitle() == groupName) {
+      std::cout << "Group: " << group->getTitle() << "\n";
+      std::cout << "Number of students: " << group->getStudents().size() << "\n";
+      for (Student *student : group->getStudents()) {
+        std::cout << "----------------\n";
+        std::cout << "Student: " << student->getFio() << "\n";
+        std::cout << "Marks: ";
+        for (int64_t mark : student->getMarks()) {
+          std::cout << mark << " ";
+        }
+        std::cout << "\n";
+        std::cout << "Average Mark: " << std::fixed << std::setprecision(2) << student->getAverageMark() << "\n";
+      }
+      std::cout << "----------------\n";
+      std::cout << "Group Average Mark: " << std::fixed << std::setprecision(2) << group->getAverageMarkGroup() << "\n\n";
+      return;
+    }
+  }
+  std::cout << "Group not found\n";
+}
+
 void Deanery::moveStudents(int64_t studentId, const std::string &groupName) {
   Student *studentMove = nullptr;
   Group *oldGroup = nullptr;

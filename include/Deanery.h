@@ -3,6 +3,7 @@
 
 
 #pragma once
+
 #ifndef DEANERY_INCLUDE_DEANERY_H_
 #define DEANERY_INCLUDE_DEANERY_H_
 
@@ -17,10 +18,12 @@ class Deanery {
 
  public:
   Deanery() = default;
-  void createStudentsFromFile(const std::string& filename);
-  void createGroupFromFile(const std::string& filename);
+  void createStudentsFromFile(const std::string &filename);
+  void createGroupFromFile(const std::string &filename);
   void addMarksToAll();
   void getStatistics();
+  void getStatistics(const std::string &groupName); // overloaded function with groupName parameter
+  // to get statistics for a specific group
   void moveStudents(int64_t studentId, const std::string &groupName);
   void expelStudent(int64_t studentId);
   void saveData();
