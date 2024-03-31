@@ -33,3 +33,13 @@
 5	655	7335942277618755	CMakeFiles/deanery_lib.dir/src/main.cpp.obj	fa7452df93dd543a
 655	749	7335942278593924	libdeanery_lib.a	b8a065803d26baa2
 749	885	7335942279918597	Deanery.exe	e7539abf17c3d714
+50	886	7335944992720230	CMakeFiles/Deanery.dir/src/Student.cpp.obj	494279c0afad93fb
+10	896	7335944992808438	CMakeFiles/deanery_lib.dir/src/Student.cpp.obj	dccefb2043744ca4
+35	1011	7335944993952275	CMakeFiles/Deanery.dir/src/Group.cpp.obj	dc27f53999ecce91
+16	1017	7335944994002220	CMakeFiles/deanery_lib.dir/src/Group.cpp.obj	78f366798cd51400
+22	1192	7335944995795942	CMakeFiles/deanery_lib.dir/src/main.cpp.obj	fa7452df93dd543a
+27	1193	7335944995815941	CMakeFiles/Deanery.dir/src/main.cpp.obj	4529b036df3d6131
+3	1326	7335944997148086	CMakeFiles/deanery_lib.dir/src/Deanery.cpp.obj	a3915c59a8d67f4c
+42	1364	7335944997535291	CMakeFiles/Deanery.dir/src/Deanery.cpp.obj	d6acb393a0dadb5c
+1327	1451	7335944998405360	libdeanery_lib.a	b8a065803d26baa2
+1451	1593	7335944999778811	Deanery.exe	e7539abf17c3d714

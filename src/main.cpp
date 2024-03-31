@@ -91,8 +91,8 @@ int main() {
   }
   // --< test Deanery Class >--
   Deanery deanery;
-  deanery.createGroupFromFile(R"(C:\Users\Leo\CLionProjects\Deanery\src\groups.txt)"); // create groups
-  deanery.createStudentsFromFile(R"(C:\Users\Leo\CLionProjects\Deanery\src\students.txt)"); // create students
+  deanery.createGroupFromFile(R"(C:\Users\Leo\CLionProjects\Deanery\bd\groups.txt)"); // create groups
+  deanery.createStudentsFromFile(R"(C:\Users\Leo\CLionProjects\Deanery\bd\students.txt)"); // create students
   deanery.getStatistics(); // check that the marks
   deanery.addMarksToAll(); // add marks to all students
   deanery.getStatistics(); // check that the average mark has changed
