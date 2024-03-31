@@ -13,22 +13,24 @@
 
 class Deanery {
  private:
-  std::vector<Group*> groups;
+  std::vector<Group *> groups;
 
  public:
   Deanery() = default;
-  void createStudentsFromFile();
-  void createGroupFromFile();
+  void createStudentsFromFile(const std::string& filename);
+  void createGroupFromFile(const std::string& filename);
   void addMarksToAll();
-  void GetStatistics();
-  void moveStudents(int64_t studentId, const std::string& groupName);
+  void getStatistics();
+  void moveStudents(int64_t studentId, const std::string &groupName);
   void expelStudent(int64_t studentId);
   void saveData();
+  void loadData();
   void displayData();
 
-  std::vector<Group*> getGroups() const;
+  std::vector<Group *> getGroups() const;
 
-  void setGroups(const std::vector<Group*>& newGroups);
+  void setGroups(const std::vector<Group *> &newGroups);
+
 };
 
 #endif //DEANERY_INCLUDE_DEANERY_H_

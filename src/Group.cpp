@@ -15,11 +15,17 @@ void Group::addStudent(const Student* student) {
 
 void Group::chooseHead() {
   if (!students.empty()) {
-    srand(time(0));
-    int randomIndex = rand() % students.size();
-    head = students[randomIndex];
+    double maxAverageMark = -1.0;
+    Student* potentialHead = nullptr;
+    for (Student* student : students) {
+      double averageMark = student->getAverageMark();
+      if (averageMark > maxAverageMark) {
+        maxAverageMark = averageMark;
+        potentialHead = student;
+      }
+    }
+    head = potentialHead;
   }
-  else return;
 }
 
 bool Group::findStudent(const std::string& fio) {

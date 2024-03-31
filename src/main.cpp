@@ -10,6 +10,7 @@
 #include "Student.h"
 
 int main() {
+  // --< test Student and Group Class >--
   Student student;
   student.setId(123);
   if (student.getId() != 123) {
@@ -83,11 +84,18 @@ int main() {
   if (!group.findStudent(3)) {
     std::cout << "Test findStudent by id failed\n";
   }
+  if (!group.findStudent("Student 3")) {
+    std::cout << "Test findStudent by id failed\n";
+  }
 
   group.deleteStudent(&student3);
   if (group.findStudent(3)) {
     std::cout << "Test deleteStudent failed\n";
   }
-
+  // --< test Deanery Class >--
+  Deanery deanery;
+  deanery.createGroupFromFile(R"(C:\Users\Leo\CLionProjects\Deanery\src\groups.txt)");
+  deanery.createStudentsFromFile(R"(C:\Users\Leo\CLionProjects\Deanery\src\students.txt)");
+  deanery.getStatistics();
   return 0;
 }
