@@ -8,7 +8,8 @@
 #include <iostream>
 #include <iomanip>
 
-void Deanery::createStudentsFromFile(const std::string& filename) {;
+void Deanery::createStudentsFromFile(const std::string &filename) {
+  ;
   std::ifstream file(filename);
   std::string line;
   while (std::getline(file, line)) {
@@ -35,7 +36,7 @@ void Deanery::createStudentsFromFile(const std::string& filename) {;
   }
 }
 
-void Deanery::createGroupFromFile(const std::string& filename) {
+void Deanery::createGroupFromFile(const std::string &filename) {
   std::ifstream file(filename);
   std::string line;
   while (std::getline(file, line)) {
@@ -78,7 +79,7 @@ void Deanery::getStatistics() {
   }
 }
 
-void Deanery::getStatistics(const std::string& groupName) {
+void Deanery::getStatistics(const std::string &groupName) {
   for (Group *group : groups) {
     if (group->getTitle() == groupName) {
       std::cout << "Group: " << group->getTitle() << "\n";
@@ -94,7 +95,8 @@ void Deanery::getStatistics(const std::string& groupName) {
         std::cout << "Average Mark: " << std::fixed << std::setprecision(2) << student->getAverageMark() << "\n";
       }
       std::cout << "----------------\n";
-      std::cout << "Group Average Mark: " << std::fixed << std::setprecision(2) << group->getAverageMarkGroup() << "\n\n";
+      std::cout << "Group Average Mark: " << std::fixed << std::setprecision(2) << group->getAverageMarkGroup()
+                << "\n\n";
       return;
     }
   }
@@ -168,7 +170,7 @@ void Deanery::expelStudent(int64_t studentId) {
 }
 
 void Deanery::saveData() {
-  std::ofstream file(R"(C:\Users\Leo\CLionProjects\Deanery\src\data.txt)");
+  std::ofstream file(R"(C:\Users\Leo\CLionProjects\Deanery\bd\data.txt)");
   if (!file) {
     std::cerr << "Unable to open file for writing.\n";
     return;
@@ -195,14 +197,14 @@ void Deanery::saveData() {
 }
 
 void Deanery::loadData() {
-  std::ifstream file(R"(C:\Users\Leo\CLionProjects\Deanery\src\data.txt)");
+  std::ifstream file(R"(C:\Users\Leo\CLionProjects\Deanery\bd\data.txt)");
   if (!file) {
     std::cerr << "Unable to open file for reading.\n";
     return;
   }
 
   std::string line;
-  Group* currentGroup = nullptr;
+  Group *currentGroup = nullptr;
   while (std::getline(file, line)) {
     std::istringstream iss(line);
     std::string type;
@@ -220,9 +222,9 @@ void Deanery::loadData() {
       char colon;
       iss >> id >> colon;
       std::getline(iss, fio);
-      Student* head = new Student(id, fio);
+      Student *head = new Student(id, fio);
       currentGroup->setHead(head);
-    }else if (type == "Student" && currentGroup != nullptr) {
+    } else if (type == "Student" && currentGroup != nullptr) {
       int64_t id;
       std::string fio, marksStr;
       char colon;
@@ -235,7 +237,7 @@ void Deanery::loadData() {
       while (marksIss >> mark) {
         marks.push_back(mark);
       }
-      Student* student = new Student(id, fio);
+      Student *student = new Student(id, fio);
       student->setMarks(marks);
       currentGroup->addStudent(student);
     } else if (type == "EndGroup") {

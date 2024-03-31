@@ -7,17 +7,17 @@
 #include <ctime>
 #include "Group.h"
 
-Group::Group(const std::string& title, const std::string& spec) : title(title), spec(spec), head(nullptr) {}
+Group::Group(const std::string &title, const std::string &spec) : title(title), spec(spec), head(nullptr) {}
 
-void Group::addStudent(const Student* student) {
-  students.push_back(const_cast<Student*>(student));
+void Group::addStudent(const Student *student) {
+  students.push_back(const_cast<Student *>(student));
 }
 
 void Group::chooseHead() {
   if (!students.empty()) {
     double maxAverageMark = -1.0;
-    Student* potentialHead = nullptr;
-    for (Student* student : students) {
+    Student *potentialHead = nullptr;
+    for (Student *student : students) {
       double averageMark = student->getAverageMark();
       if (averageMark > maxAverageMark) {
         maxAverageMark = averageMark;
@@ -28,7 +28,7 @@ void Group::chooseHead() {
   }
 }
 
-bool Group::findStudent(const std::string& fio) {
+bool Group::findStudent(const std::string &fio) {
   for (Student *student : students) {
     if (student->getFio() == fio) {
       return true;
@@ -37,7 +37,7 @@ bool Group::findStudent(const std::string& fio) {
   return false;
 }
 
-bool Group::findStudent(const int64_t& id) {
+bool Group::findStudent(const int64_t &id) {
   for (Student *student : students) {
     if (student->getId() == id) {
       return true;
@@ -51,13 +51,13 @@ double Group::getAverageMarkGroup() {
     return 0.0;
   }
   double sum = 0.0;
-  for (Student* student : students) {
+  for (Student *student : students) {
     sum += student->getAverageMark();
   }
   return sum / students.size();
 }
 
-void Group::deleteStudent(Student* student) {
+void Group::deleteStudent(Student *student) {
   for (int64_t i = 0; i < students.size(); ++i) {
     if (students[i] == student) {
       students.erase(students.begin() + i);
@@ -66,35 +66,34 @@ void Group::deleteStudent(Student* student) {
   }
 }
 
-
-void Group::setTitle(const std::string& title) {
+void Group::setTitle(const std::string &title) {
   this->title = title;
 }
 
-void Group::setSpec(const std::string& spec) {
+void Group::setSpec(const std::string &spec) {
   this->spec = spec;
 }
 
-void Group::setStudents(const std::vector<Student*>& students) {
+void Group::setStudents(const std::vector<Student *> &students) {
   this->students = students;
 }
 
-void Group::setHead(Student* head) {
+void Group::setHead(Student *head) {
   this->head = head;
 }
 
-const std::string& Group::getTitle() const {
+const std::string &Group::getTitle() const {
   return title;
 }
 
-const std::string& Group::getSpec() const {
+const std::string &Group::getSpec() const {
   return spec;
 }
 
-const std::vector<Student*>& Group::getStudents() const {
+const std::vector<Student *> &Group::getStudents() const {
   return students;
 }
 
-Student* Group::getHead() const {
+Student *Group::getHead() const {
   return head;
 }

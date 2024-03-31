@@ -1,0 +1,38 @@
+Group:23CST-4:CST
+Head:29:Andreev E.F
+Student:20:Zaitsev M.N:3 5 2 4 8 2 
+Student:21:Soloviev O.P:7 9 6 10 8 7 0 
+Student:22:Mishin Q.R:4 2 9 0 2 8 9 
+Student:23:Fadeev S.T:7 9 3 7 5 2 6 
+Student:24:Abramov U.V:4 2 9 0 2 8 8 
+Student:25:Tikhonov W.X:7 9 6 10 8 7 1 
+Student:26:Fedotov Y.Z:4 2 9 0 2 8 0 
+Student:27:Yakovlev A.B:7 9 3 7 5 2 8 
+Student:28:Melnikov C.D:3 8 5 0 1 7 2 5 8 
+Student:29:Andreev E.F:7 9 6 10 8 7 7 
+EndGroup
+Group:23CST-5:CST
+Head:0:Pestov L.E
+Student:2:Sidorov V.G:3 8 5 0 1 7 2 5 6 
+Student:3:Petrov D.E:4 2 9 0 2 8 1 
+Student:4:Kuznetsov Z.H:7 9 6 10 8 7 3 
+Student:5:Popov I.J:3 8 5 0 1 7 2 5 5 
+Student:6:Vasiliev K.L:3 8 5 0 1 7 2 5 4 
+Student:7:Mikhailov M.N:7 9 3 7 5 2 7 
+Student:8:Fedorov O.P:4 2 9 0 2 8 0 
+Student:9:Morozov Q.R:3 8 5 0 1 7 2 5 5 
+EndGroup
+Group:23CST-6:CST
+Head:14:Orlov A.B
+Student:10:Sokolov S.T:7 9 6 10 8 7 6 
+Student:11:Lebedev U.V:4 2 9 0 2 8 3 
+Student:12:Kozlov W.X:7 9 3 7 5 2 4 
+Student:13:Novikov Y.Z:3 8 5 0 1 7 2 5 1 
+Student:14:Orlov A.B:7 9 6 10 8 7 9 
+Student:15:Belov C.D:3 5 2 4 8 9 
+Student:16:Romashkin E.F:3 8 5 0 1 7 2 5 10 
+Student:17:Kudrin G.H:7 9 3 7 5 2 4 
+Student:18:Voronin I.J:4 2 9 0 2 8 9 
+Student:19:Kolesnikov K.L:4 2 9 0 2 8 6 
+Student:0:Pestov L.E:7 9 6 10 8 7 4 
+EndGroup

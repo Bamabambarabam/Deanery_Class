@@ -55,7 +55,7 @@ int main() {
 
   Student student1(1, "Student 1"); // create student1
   Student student2(2, "Student 2"); // create student2
-  std::vector<Student*> students = {&student1, &student2}; // create vector students
+  std::vector<Student *> students = {&student1, &student2}; // create vector students
   group.setStudents(students); // add students to group
   if (group.getStudents() != students) { // check students
     std::cout << "Test setStudents/getStudents failed\n";
@@ -97,11 +97,20 @@ int main() {
   deanery.addMarksToAll(); // add marks to all students
   deanery.getStatistics(); // check that the average mark has changed
 
-
-  // Test moveStudents
+  for (Group *group : deanery.getGroups()) {
+    group->chooseHead(); // choose head for all groups in deanery
+  }
   deanery.moveStudents(0, "23CST-6"); // Test moveStudents
+  deanery.expelStudent(1); // Test expelStudent
   deanery.getStatistics("23CST-6"); // check that the student has moved
-  deanery.getStatistics("23CST-5");
+  deanery.getStatistics("23CST-5"); // check that the student has been expelled
+  deanery.saveData(); // save data
+  // перед тестированием loadData завершите программу и закоментируйте тесты выше (кроме создания обьекта Deanery)
+  // чтобы в классах ничего не хранилось ранее(информация должна быть только в Data.txt),
+  // иначе группы и студенты будут дублироваться
 
+/*  std::cout << "Load data\n";
+  deanery.loadData();
+  deanery.displayData();*/
   return 0;
 }
